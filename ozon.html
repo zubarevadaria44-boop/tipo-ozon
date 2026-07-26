@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ozon.css">
+    <title>online-store</title>
+</head>
+<body>
+    <header class="site-header">
+        <h1>DANA</h1>
+        <nav class="navigation">
+            <div class="Navigation"><a href="ozon.html">Главная</a></div>
+            <div class="Navigation"><a href="ozon.html">Каталог</a></div>
+            <div class="Navigation"><a href="favorites.html">Избранное</a></div>
+            <div class="Navigation"><a href="cart.html">Корзина</a></div>
+        </nav>
+    </header>
+
+    <main class="catalog">
+        <div class="product-card">
+             <button class="favorite-btn" onclick="handleFavoriteClick(this, 1)">♥</button> 
+             <a href="product.html?id=1">
+                <img src="image/coffee.jpg" alt="Product Image">
+                <h3>Кофе в зернах Tasty Coffee Бразилия Серрадо, 1 кг</h3>
+                <p class="price">1812 руб.</p>
+            </a>
+        </div>
+        <div class="product-card">
+             <button class="favorite-btn" onclick="handleFavoriteClick(this, 2)">♥</button> 
+             <a href="product.html?id=2">
+                <img src="image/batonchik.jpg" alt="Product Image">
+                <h3>Протеиновые батончики без сахара ассорти в шоколаде 16 шт</h3>
+                <p class="price">561 руб.</p>
+            </a>
+        </div>
+        <div class="product-card">
+             <button class="favorite-btn" onclick="handleFavoriteClick(this, 3)">♥</button> 
+             <a href="product.html?id=3">
+                <img src="image/8511828697.jpg" alt="Product Image">
+                <h3>Гейзерная кофеварка Juliania 450 мл для газовой плиты</h3>
+                <p class="price">1605 руб.</p>
+            </a>  
+            </div>
+        <div class="product-card">
+             <button class="favorite-btn" onclick="handleFavoriteClick(this, 4)">♥</button> 
+             <a href="product.html?id=4">
+                <img src="image/10925542141.jpg" alt="Product Image">
+                <h3>Саше для шкафа ароматическое Дубай; Ароматизатор для шкафа 6 шт Alkari Candles</h3>
+                <p class="price">371 руб.</p>
+            </a>   
+        </div>
+        <div class="product-card">
+             <button class="favorite-btn" onclick="handleFavoriteClick(this, 5)">♥</button> 
+             <a href="product.html?id=5">
+                <img src="image/cros1.jpg" alt="Product Image">
+                <h3>Кроссовки Nike REVOLUTION 8</h3>
+                <p class="price">5613 руб.</p>
+            </a>
+        </div>
+        <div class="product-card">
+             <button class="favorite-btn" onclick="handleFavoriteClick(this, 6)">♥</button> 
+             <a href="product.html?id=6">
+                <img src="image/dog1.jpg" alt="Product Image">
+                <h3>Игрушки для собак и щенков, мелких и средних пород</h3>
+                <p class="price">654 руб.</p>
+            </a>
+        </div>
+        <div class="product-card">
+             <button class="favorite-btn" onclick="handleFavoriteClick(this, 7)">♥</button> 
+             <a href="product.html?id=7">
+                <img src="image/pol1.jpg" alt="Product Image">
+                <h3>Робот-пылесос Roborock Q8 Max Pro Plus</h3>
+                <p class="price">21968 руб.</p>
+            </a>
+        </div>
+        </div>
+        <div class="product-card">
+             <button class="favorite-btn" onclick="handleFavoriteClick(this, 8)">♥</button> 
+             <a href="product.html?id=8">
+                <img src="image/cvet1.jpg" alt="Product Image">
+                <h3>Светодиодные Лед лампы h4 с линзой , мини линзы h4 LED h4 2 шт</h3>
+                <p class="price">1460 руб.</p>
+            </a>
+        </div>
+        </div>
+    </main>
+    <script src="products.js"></script>
+    <script src="cart.js"></script>
+
+        
+  
+</body>
+</html>

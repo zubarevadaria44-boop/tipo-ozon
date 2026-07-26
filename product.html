@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ozon.css">
+    <title>online-store</title>
+</head>
+<body>
+    <header class="site-header">
+        <h1>DANA</h1>
+        <nav class="navigation">
+            <div class="Navigation"><a href="ozon.html">Главная</a></div>
+            <div class="Navigation"><a href="catalog.html">Каталог</a></div>
+            <div class="Navigation"><a href="favorites.html">Избранное</a></div>
+            <div class="Navigation"><a href="cart.html">Корзина</a></div>
+        </nav>
+    </header>
+
+    <main class="product-detail" id="product-detail"></main>
+
+    <script src="products.js"></script>
+    <script src="cart.js"></script>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const id = Number(params.get('id'));
+
+        // Find product in the products array
+        const product = products.find(p => p.id === id);
+
+        if (product) {
+            document.getElementById('product-detail').innerHTML = `
+            <div class="product-layout">
+                <div class="product-gallery">
+                    <img id="main-image" src="${product.images[0]}" alt="${product.name}">
+                    <div id="thumbnails"></div>
+                </div>
+                <div class="product-info">
+                    <h1>${product.name}</h1>
+                    <p>${product.description}</p>
+                    <div id="weight-buttons"></div>
+                    <p class="price" id="price-display"></p>
+                    <div class="action-buttons">
+                        <button>Добавить в корзину</button>
+                        <button>Купить сейчас</button>
+                        <button onclick="handleFavoriteClick(this, ${product.id})">Добавить в избранное</button>
+                    </div>
+                </div>
+            </div>
+            <h2>Характеристики</h2>
+            <table id="characteristics-table"></table>
+            `;
+
+            const mainImage = document.getElementById('main-image');
+            const thumbnails = document.getElementById('thumbnails');
+
+            product.images.forEach(imgSrc => {
+                const thumb = document.createElement('img');
+                thumb.src = imgSrc;
+                thumb.classList.add('thumbnail');
+
+                thumb.addEventListener('click', () => {
+                    mainImage.src = imgSrc;
+                });
+
+                thumbnails.appendChild(thumb);
+            });
+
+            const weightButtons = document.getElementById('weight-buttons');
+            const priceDisplay = document.getElementById('price-display');
+
+            let selectedVariant = product.variants[0];
+            priceDisplay.textContent = selectedVariant.price + " руб.";
+
+            product.variants.forEach(variant => {
+                const button = document.createElement('button');
+                button.textContent = variant.weight;
+
+                button.addEventListener('click', () => {
+                    priceDisplay.textContent = variant.price + " руб.";
+                    selectedVariant = variant;
+
+                    document.querySelectorAll('#weight-buttons button').forEach(btn => {
+                        btn.classList.remove('selected');
+                    });
+                    button.classList.add('selected');
+                });
+
+                weightButtons.appendChild(button);
+            });
+
+            const table = document.getElementById('characteristics-table');
+
+            for (const key in product.characteristics) {
+                const row = document.createElement('tr');
+                row.innerHTML = `<td>${key}</td><td>${product.characteristics[key]}</td>`;
+                table.appendChild(row);
+            }
+            document.querySelector('.action-buttons button:nth-child(1)').addEventListener('click', () => {
+                addToCart(product.id, selectedVariant);
+            });
+
+            document.querySelector('.action-buttons button:nth-child(2)').addEventListener('click', () => {
+                buyNow(product.id, selectedVariant);
+            });
+
+        } else {
+            document.getElementById('product-detail').innerHTML = "<p>Product not found</p>";
+        }
+    </script>
+</body>
+</html>
