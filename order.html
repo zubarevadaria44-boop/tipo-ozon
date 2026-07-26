@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ozon.css">
+    <title>online-store</title>
+</head>
+<body>
+    <header class="site-header">
+        <h1>DANA</h1>
+        <nav class="navigation">
+            <div class="Navigation"><a href="ozon.html">Главная</a></div>
+            <div class="Navigation"><a href="favorites.html">Избранное</a></div>
+            <div class="Navigation"><a href="cart.html">Корзина</a></div>
+        </nav>
+    </header>
+    <main class="order-confirmation">
+        <h1>Спасибо за ваш заказ!</h1>
+        <p>Ваш заказ был успешно оформлен. Мы свяжемся с вами в ближайшее время.</p>
+        <a href="ozon.html" class="continue-shopping-btn">Вернуться на главную</a>
+        <!-- Форма оформления заказа -->
+    </main>
+    <script src="order.js"></script>
+    <script>
+        saveList(`cart`, []);
+    </script>
+</body>
+</html>

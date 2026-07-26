@@ -300,3 +300,15 @@ h2 {
     padding: 0 40px;
     color: #1A1A1A;
 }
+
+.cart-total {
+    text-align: right;
+    margin-top: 20px;
+    padding: 20px 40px;
+    grid-column: 1 / -1;
+    border-top: 2px solid #eee;
+}
+
+.cart-total h2 {
+    color: #ff6b4a;
+}

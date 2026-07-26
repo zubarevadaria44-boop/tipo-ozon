@@ -11,7 +11,6 @@
         <h1>DANA</h1>
         <nav class="navigation">
             <div class="Navigation"><a href="ozon.html">Главная</a></div>
-            <div class="Navigation"><a href="ozon.html">Каталог</a></div>
             <div class="Navigation"><a href="favorites.html">Избранное</a></div>
             <div class="Navigation"><a href="cart.html">Корзина</a></div>
         </nav>
@@ -50,5 +49,15 @@
                 `;
                 container.appendChild(card);
             });
+            const total = cartProducts.reduce((sum, product) => sum + product.selectedPrice, 0);
+            const totalBlock= document.createElement('div');
+            totalBlock.innerHTML = `<h2>Итого: ${total} руб.</h2>`;
+         
+        totalBlock.className = 'cart-total';
+        totalBlock.innerHTML = `
+        <h2>Итого: ${total} руб.</h2>
+        <button class="checkout-btn" onclick="window.location.href='order.html'">Оформить заказ</button>
+        `;
+        container.appendChild(totalBlock);
         }
     </script>
