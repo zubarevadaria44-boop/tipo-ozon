@@ -41,16 +41,19 @@ function buyNow(productId, variant) {
 
 function handleFavoriteClick(button, productId) {
     const favorites = getList('favorites');
+    const isSvgButton = button.querySelector('svg') !== null;
+
     if (favorites.includes(productId)) {
         removeFromFavorites(productId);
         button.classList.remove('active');
-        button.textContent = '♡';
+        if (!isSvgButton) button.textContent = '♡';
     } else {
         addToFavorites(productId);
         button.classList.add('active');
-        button.textContent = '♥';
+        if (!isSvgButton) button.textContent = '♥';
     }
 }
+
 
 function removeFromCart(productId) {
     let cart = getList('cart');

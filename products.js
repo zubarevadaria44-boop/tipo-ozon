@@ -3,15 +3,20 @@ const products = [
     id: 1,
     name: "Кофе в зернах Tasty Coffee Бразилия Серрадо, 1 кг",
     images: ["image/coffee.jpg","image/coffee1.jpg","image/coffee3.jpg","image/coffee2.jpg"],
-    description: "Базовый сорт для эспрессо натуральной обработки из региона Серрадо — одного из трёх основных кофепроизводящих регионов Бразилии наряду с Суль-де-Минас и Можиана.",
+    brand: "Tasty Coffee",
+    description:  "Базовый сорт для эспрессо натуральной обработки из региона Серрадо — одного из трёх основных кофепроизводящих регионов Бразилии наряду с Суль-де-Минас и Можиана.",
+    rating: 4.5,
+    reviewCount: 123,
     variants: [
         {
             weight: "250 гр",
-            price: 654
+            price: 654,
+            oldPrice: 2990
         },
         {
             weight: "1000 гр",
-            price: 1812
+            price: 1812,
+            oldPrice: 5000
         }
     ],
     characteristics: {
@@ -21,21 +26,26 @@ const products = [
         "Страна происхождения зерен кофе": "Бразилия",
         "Вес товара, г": "250"
 
-    }
+    },
 },
 {
     id: 2,
     name: "Протеиновые батончики без сахара ассорти в шоколаде 16 шт",
     images: ["image/batonchik.jpg","image/batonchik2.jpg","image/batonchik3.jpg","image/batonchik4.jpg","image/batonchik5.jpg","image/batonchik6.jpg",],
+    brand: "Alkari Candles",
     description: "Белковые лакомства - это настоящее спасение для всех, кто следит за фигурой и хочет уделить внимание своему здоровью. Эти протеиновые батончики станут отличным выбором для перекуса или десерта. Они идеально подойдут для спортивного питания, диетического меню или просто как быстрое утоление голода.",
+    rating: 4.7,
+    reviewCount: 234,
     variants: [
         {
             weight: "16 шт",
-            price: 561
+            price: 561,
+            oldPrice: 3945
         },
         {
             weight: "24 шт",
-            price: 687
+            price: 687,
+            oldPrice: 3945
         }
     ],
     characteristics: {
@@ -49,11 +59,15 @@ const products = [
     id: 3,
     name: "Гейзерная кофеварка Juliania 450 мл для газовой плиты",
     images: ["image/8511828697.jpg","image/co1.jpg","image/co2.jpg","image/co3.jpg","image/co4.jpg","image/co6.jpg"],
+    brand: "Juliania",
     description: "Гейзерная кофеварка 450 мл", 
+    rating: 4.3,
+    reviewCount: 89,
     variants: [
         {
             weight: "450 мл",
-            price: 1605
+            price: 1605,
+            oldPrice: 10589
         },
     ],
     characteristics: {
@@ -67,11 +81,16 @@ const products = [
     id: 4,
     name: "Саше для шкафа ароматическое Дубай; Ароматизатор для шкафа 6 шт Alkari Candles",
     images: ["image/10925542141.jpg","image/sa1.jpg","image/sa2.jpg","image/sa3.jpg","image/sa4.jpg",],
-    description: "Натуральное саше ручноу работы", 
-     variants: [
+    brand: "Alkari Candles",
+    description: "Натуральное саше ручной работы", 
+    rating: 4.5,
+    reviewCount: 123,
+    variants: [
         {
             weight: "Дубай",
-            price: 371
+            price: 371,
+            oldPrice: 523
+
         },
     ],
     characteristics: {
@@ -85,27 +104,35 @@ const products = [
     id: 5,
     name: "Кроссовки Nike REVOLUTION 8",
     images: ["image/cros1.jpg","image/cros2.jpg","image/cros3.jpg"],
+    brand: "Nike",
     description: "Кроссовки Nike REVOLUTION 8 — идеальное сочетание стиля, комфорта и функциональности, предназначенное для активных мужчин. Изготовленная из высококачественных полимерных материалов, обувь обеспечивает отличную поддержку и легкость, что делает ее идеальной для повседневной носки и занятий спортом. Особенностью модели является амортизирующая подошва из резины, которая гарантирует надежное сцепление с поверхностью и отличную устойчивость на различных типах покрытия. Это позволяет вам уверенно двигаться, независимо от условий, будь то бег по парку или прогулка по городским улицам.",
+    rating: 4.8,
+    reviewCount: 156,
     variants: [
         {
             weight: "39",
-            price: 5613
+            price: 5613,
+            oldPrice: 15783
         },
         {
             weight: "40",
-            price: 5731
+            price: 5731,
+            oldPrice: 15783
         },
         {
             weight: "41",
-            price: 5849
+            price: 5849,
+            oldPrice: 15783
         },
         {
             weight: "42",
-            price: 5697
+            price: 5697,
+            oldPrice: 15783
         },
         {
             weight: "43",
-            price: 6087
+            price: 6087,
+            oldPrice: 15783
         }
     ],
     characteristics: {
@@ -120,15 +147,18 @@ const products = [
     id: 6,
     name: "Игрушки для собак и щенков, мелких и средних пород",
     images: ["image/dog1.jpg", "image/dog2.jpg", "image/dog3.jpg", "image/dog4.jpg"],
+    brand: "Dogs & Puppies",
     description: "Набор игрушек для щенков, собак мелких и средних пород-идеальное решение для активных и игривых питомцев. Вы будете спокойны за своего собакена купив по-настоящему прочный комплект игрушек, он отлично подойдет для активных игр, дрессировки и просто послужит заменителем ваших тапок, а уровень “счастливости” вашего хвостатого друга будет зашкаливать на целый день. ",
     variants: [
         {
             weight: "1 ед",
-            price: 510
+            price: 510,
+            oldPrice: 1000
         },
         {
             weight: "5 ед",
-            price: 654
+            price: 654,
+            oldPrice: 1000
         }
     ],
     characteristics: {
@@ -143,12 +173,16 @@ const products = [
     id: 7,
     name: "Робот-пылесос Roborock Q8 Max Pro Plus",
     images: ["image/pol1.jpg", "image/pol2.jpg", "image/pol3.jpg", "image/pol4.jpg"],
+    brand: "Roborock",
     description: ["Комплектация: Влагonепроницаемый коврик (1), Руководство пользователя (1), Робот (1), Модуль швабры (1), Зарядная станция (1), Адаптер (1), Швабра (1)    "],
+    rating: 4.6,
+    reviewCount: 98,
     variants: [
         {
             weight: "Новый",
-            price: 21968
-        },
+            price: 21968,
+            oldPrice: 29900
+        }
     ],
     characteristics: {
         "Артикул": "2517322978",
@@ -162,15 +196,20 @@ const products = [
     id: 8,
     name: "Светодиодные Лед лампы h4 с линзой , мини линзы h4 LED h4 2 шт",
     images: ["image/cvet1.jpg", "image/cvet2.jpg", "image/cvet3.jpg", "image/cvet4.jpg"],
+    brand: "LED Lights",
     description: "Светодиодные линзы обеспечивают яркий и четкий свет, позволяя видеть опасности (например, животных на дороге) за несколько секунд раньше, чем галогеновые лампы. Это значительно повышает безопасность в ночное время.",
+    rating: 4.4,
+    reviewCount: 67,
     variants: [
         {
             weight: "H4",
-            price: 1460
+            price: 1460,
+            oldPrice: 1990,
         },
         {
             weight: "H7",
-            price: 1500
+            price: 1500,
+            oldPrice: 2990
         }
     ],
     characteristics: {
@@ -181,7 +220,199 @@ const products = [
         "Цвет": "черный"
     }
     
-}]
+},
+
+{
+    id: 9,
+    name: "Кроссовки ASICS ASICS GEL-NYC 2055",
+    images: ["image/asic.jpg", "image/asic2.jpg", "image/asic3.jpg"],
+    brand: "Asics",
+    description: "Кроссовки ASICS GEL-NIMBUS 25/26/27: Максимальный комфорт для долгих дистанций ASICS GEL-NIMBUS 25/26/27 — это эволюция легендарной серии, созданной для бегунов, ценящих превосходную амортизацию и комфорт на любых дистанциях. Ключевые инновации: Улучшенная амортизация: — Технология FF BLAST PLUS ECO во всей пятке обеспечивает отличное смягчение ударов и энергичный отскок. Материал на 24% состоит из биокомпонентов, что делает кроссовки легкими и экологичными. — PureGel в пятке гасит удары эффективнее, чем традиционные системы, обеспечивая плавность движений. ",
+    rating: 4.9,
+    reviewCount: 1237,
+    variants: [
+        {
+            weight: "36",
+            price: 3875,
+            oldPrice: 12487
+        },
+        {
+            weight: "37",
+            price: 3975,
+            oldPrice: 12987
+        },
+        {
+            weight: "38",
+            price: 4075,
+            oldPrice: 13487
+        },
+        {
+            weight: "39",
+            price: 4175,
+            oldPrice: 13987
+        }
+    ],
+    characteristics: {
+        "Артикул": "2517322980",
+        "Тип": "Прочее",
+        "Количесвto в упаковке, шт": "1",
+        "Материал": "пластик",
+        "Цвет": "черный"
+    }
+},
+{
+id: 10,
+    name: "Протеин сывороточный для набора мышечной массы GLS Банановый ",
+    images: ["image/pro.jpg", "image/pro2.jpg", "image/pro3.jpg"],
+    brand: "WheyProtein",
+    description: "Протеин содержит большое количество аминокислот, в том числе ВСАА – лейцин, изолейцин и валин, которые стимулируют синтез белка, способствуя росту мышечной массы. Сывороточный протеин улучшает эффективность тренировочного процесса и силовые показатели. Протеин для набора мышечной массы способствует повышению уровня энергии, выносливости и работоспособности. ",
+    rating: 4.7,
+    reviewCount: 1237,
+    variants: [
+        {
+            weight: "Банан",
+            price: 2385,
+            oldPrice: 7000
+        },
+        {
+            weight: "Шоколад",
+            price: 2490,
+            oldPrice: 5900
+        },
+        {
+            weight: "Клубника",
+            price: 2590,
+            oldPrice: 6900
+        }
+    ],
+    characteristics: {
+        "Артикул": "2517322980",
+        "Тип": "Прочее",
+        "Количесвto в упаковке, шт": "1",
+        "Материал": "пластик",
+    }
+},
+{
+    id: 11,
+    name: "Конструктор Техник Porsche 911 RSR",
+    images: ["image/por1.jpg", "image/por2.jpg", "image/por3.jpg"],
+    brand: "Техник",
+    description: "Конструктор Technic Porsche 911 RSR — детализированная сборная модель легендарного гоночного автомобиля для детей, подростков, взрослых, коллекционеров и поклонников автоспорта. Набор позволяет собрать эффектную копию Porsche 911 RSR, вдохновленную миром гонок серии GT, и получить удовольствие от увлекательной сборки с реалистичными инженерными функциями.",
+    rating: 4.8,
+    reviewCount: 890,
+    variants: [
+        {
+            weight: "Porsche 911 RSR",
+            price: 1358,
+            oldPrice: 4826
+        }
+    ],
+    characteristics: {
+        "Артикул": "2517322981",
+        "Тип": "Прочее",
+        "Количесвto в упаковке, шт": "1",
+        "Материал": "пластик",
+        "Цвет": "синий"
+    }
+},
+{
+    id: 12,
+    name: "LEVEND Свеча ароматическая Раффаэлло",
+    images: ["image/cv1.jpg", "image/cv2.jpg", "image/cv3.jpg"],
+    brand: "LEVEND",
+    description: "Cвеча ароматическая Раффаэлло от бренда LEVEND — это идеальное решение для создания уютной атмосферы в доме. Свеча обладает длительным горением и приятным ароматом, который поможет расслабиться после тяжелого дня.",
+    rating: 4.9,
+    reviewCount: 780,
+    variants: [
+        {
+            weight: "Раффаэлло",
+            price: 1599,
+            oldPrice: 5200
+        },
+        {
+            weight: "Сирень",
+            price: 1599,
+            oldPrice: 5200
+        }
+    ],
+    characteristics: {
+        "Артикул": "2517322982",
+        "Тип": "Прочее",
+        "Количесвto в упаковке, шт": "1",
+        "Материал": "пластик",
+        "Цвет": "красный"
+    }
+},
+{
+    id: 13,
+    name: "Ароматический диффузор для дома с палочками Хлопок и миндаль 50 мл",
+    images: ["image/dif.jpg", "image/dif2.jpg", "image/dif3.jpg"],
+    brand: "home",
+    description: "Ароматический диффузор «Хлопок и миндаль» от LEVEND создаёт мягкий, естественный аромат с нотами теплого хлопка, сладковатого миндаля. Компактный настольный формат позволяет легко разместить его в любом углу комнаты, а фибровые палочки равномерно распределяют запах без резких скачков интенсивности.",
+    rating: 4.9,
+    reviewCount: 780,
+    variants: [
+        {
+            weight: "Хлопок и миндаль",
+            price: 205,
+            oldPrice: 1200
+        }
+    ],
+    characteristics: {
+        "Артикул": "2517322983",
+        "Тип": "Прочее",
+        "Количесвto в упаковке, шт": "1",
+        "Материал": "пластик",
+        "Цвет": "фиолетовый"
+    }
+},
+{
+    id: 14,
+    name: "MIXIT Скраб для тела парфюмированный женский соляной Лимонный пирог ",
+    images: ["image/mix1.jpg", "image/mix2.jpg", "image/mix3.jpg"],
+    brand: "MIXIT",
+    description: "Состав: Соль пищевая, масло кокосовое, крахмал кукурузный, глицерил стеарат, масло сладкого миндаля, масло ши, полисорбат 20, парфюмерная композиция, изопропил пальмитат, семена чиа, скорлупа грецкого ореха, бутилгидрокситолуол, вода, пропилен гликоль, экстракт манго, экстракт банана, динатриевая соль ЭДТА, бензоат натрия, сорбат калия, бензиловый спирт, лимонен, цитраль, линалоол, CI 19140, CI 15985.",
+    rating: 4.5,
+    reviewCount: 100,
+    variants: [
+        {
+            weight: "Стандарт",
+            price: 506,
+            oldPrice: 1200
+        }
+    ],
+    characteristics: {
+        "Артикул": "2517322984",
+        "Тип": "Прочее",
+        "Количесвto в упаковке, шт": "1",
+        "Материал": "пластик",
+        "Цвет": "синий"
+    }
+},
+{
+    id: 15,
+    name: "VOIS Маска для волос с кератином восстанавливающая, 350мл",
+    images: ["image/vois1.jpg", "image/vois2.jpg", "image/vois3.jpg"],
+    brand: "VOIS",
+    description: "Состав:aqua, trideceth-12, cetrimonium chloride, sodium benzoate, amodimethicone, cetearyl alcohol, cetyl alcohol, behentrimonium chloride, isopropyl alcohol, bis-aminopropyl dimethicone, alcohol, behenamidopropyl dimethylamine, stearamidopropyl dimethylamine, hydroxyethylcellulose, lactic acid, peg-20 stearate, fragrance, phenoxyethanol, hydrolyzed oat protein, ethylhexylglycerin, peg-14m, bht, silica, glycerin, ficus carica (fig) fruit extract, 1,2-hexanediol, hydroxyacetophenone, ci 19140, sodium chloride, ci 15985, alanine, arginine, aspartic acid, serine, valine, glycine, pca, phenylalanine, proline, sodium pca, sodium lactate, threonine, histidine, isoleucine, dimethicone, keratin, macadamia ternifolia seed oil, argania spinosa kernel oil",
+    rating: 4.7,
+    reviewCount: 150,
+    variants: [
+        {
+            weight: "Стандарт",
+            price: 385,
+            oldPrice: 479
+        }
+    ],
+    characteristics: {
+        "Артикул": "2517322985",
+        "Тип": "Прочее",
+        "Количесвto в упаковке, шт": "1",
+        "Материал": "пластик",
+        "Цвет": "зеленый"
+    }
+}
+]
 
 
 
