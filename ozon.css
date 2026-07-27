@@ -660,3 +660,27 @@ h2 {
     object-fit: cover;
     border-radius: 8px;
 }
+
+.remove-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    width: 100%;
+    background: #fff;
+    border: 2px solid #ddd;
+    color: #767676;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 8px;
+    transition: border-color 0.2s, color 0.2s, background 0.2s;
+}
+
+.remove-btn:hover {
+    border-color: #ff3b7f;
+    color: #ff3b7f;
+    background: #fff5f8;
+}

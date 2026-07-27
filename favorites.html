@@ -114,18 +114,43 @@
         if (favoriteProducts.length === 0) {
             container.innerHTML = "<p>В избранном нет продуктов</p>";
         } else {
-            favoriteProducts.forEach(product => {
-                const card = document.createElement('div');
-                card.className = 'product-card';
-                card.innerHTML = `
-    <a href="product.html?id=${product.id}">
-        <img src="${product.images[0]}" alt="${product.name}">
-        <h3>${product.name}</h3>
-        <p class="price">${product.variants[0].price} руб.</p>
-    </a>
-    <button onclick="removeFromFavorites(${product.id}); location.reload();">Удалить из избранного</button>
-`;
-                container.appendChild(card);
-            });
+           favoriteProducts.forEach(product => {
+    const variant = product.variants[0];
+    const oldPrice = variant.oldPrice;
+    const discount = oldPrice ? Math.round((1 - variant.price / variant.oldPrice) * 100) : null;
+
+    const card = document.createElement('div');
+    card.className = 'product-card';
+    card.innerHTML = `
+        <a href="product.html?id=${product.id}">
+            <img src="${product.images[0]}" alt="${product.name}">
+            <h3>${product.name}</h3>
+            <div class="brand-row">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20.59 13.41L13.42 20.58a2 2 0 0 1-2.83 0L2.59 12.58a2 2 0 0 1 0-2.83l7.17-7.17A2 2 0 0 1 11.17 2H18a2 2 0 0 1 2 2v6.83a2 2 0 0 1-.41 1.58z"></path>
+                    <circle cx="7" cy="7" r="1"></circle>
+                </svg>
+                <span class="brand-name">${product.brand}</span>
+            </div>
+            <div class="rating">
+                <span class="stars">★ ${product.rating}</span>
+                <span class="reviews">${product.reviewCount} отзыва</span>
+            </div>
+            <div class="price-row">
+                <span class="price">${variant.price} руб.</span>
+                ${oldPrice ? `<span class="price-old">${oldPrice} руб.</span><span class="discount">-${discount}%</span>` : ''}
+            </div>
+        </a>
+        <button class="remove-btn" onclick="removeFromFavorites(${product.id}); location.reload();">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="3 6 5 6 21 6"></polyline>
+                <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+            </svg>
+            <span>Удалить из избранного</span>
+        </button>
+    `;
+    container.appendChild(card);
+});
+            
         }
     </script>
