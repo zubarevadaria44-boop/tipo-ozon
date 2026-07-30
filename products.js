@@ -2,8 +2,10 @@ const products = [
 {
     id: 1,
     name: "Кофе в зернах Tasty Coffee Бразилия Серрадо, 1 кг",
+    category: 22, 
     images: ["image/coffee.jpg","image/coffee1.jpg","image/coffee3.jpg","image/coffee2.jpg"],
     brand: "Tasty Coffee",
+    deliveryDays: 1,
     description:  "Базовый сорт для эспрессо натуральной обработки из региона Серрадо — одного из трёх основных кофепроизводящих регионов Бразилии наряду с Суль-де-Минас и Можиана.",
     rating: 4.5,
     reviewCount: 123,
@@ -31,8 +33,10 @@ const products = [
 {
     id: 2,
     name: "Протеиновые батончики без сахара ассорти в шоколаде 16 шт",
+    category: 21,
     images: ["image/batonchik.jpg","image/batonchik2.jpg","image/batonchik3.jpg","image/batonchik4.jpg","image/batonchik5.jpg","image/batonchik6.jpg",],
     brand: "Alkari Candles",
+    deliveryDays: 2,
     description: "Белковые лакомства - это настоящее спасение для всех, кто следит за фигурой и хочет уделить внимание своему здоровью. Эти протеиновые батончики станут отличным выбором для перекуса или десерта. Они идеально подойдут для спортивного питания, диетического меню или просто как быстрое утоление голода.",
     rating: 4.7,
     reviewCount: 234,
@@ -58,9 +62,11 @@ const products = [
 {
     id: 3,
     name: "Гейзерная кофеварка Juliania 450 мл для газовой плиты",
+    category: 15,
     images: ["image/8511828697.jpg","image/co1.jpg","image/co2.jpg","image/co3.jpg","image/co4.jpg","image/co6.jpg"],
     brand: "Juliania",
     description: "Гейзерная кофеварка 450 мл", 
+    deliveryDays: 3,
     rating: 4.3,
     reviewCount: 89,
     variants: [
@@ -80,9 +86,11 @@ const products = [
 {
     id: 4,
     name: "Саше для шкафа ароматическое Дубай; Ароматизатор для шкафа 6 шт Alkari Candles",
+    category: 17,
     images: ["image/10925542141.jpg","image/sa1.jpg","image/sa2.jpg","image/sa3.jpg","image/sa4.jpg",],
     brand: "Alkari Candles",
     description: "Натуральное саше ручной работы", 
+    deliveryDays: "0",
     rating: 4.5,
     reviewCount: 123,
     variants: [
@@ -103,8 +111,10 @@ const products = [
 {
     id: 5,
     name: "Кроссовки Nike REVOLUTION 8",
+    category: 10,
     images: ["image/cros1.jpg","image/cros2.jpg","image/cros3.jpg"],
     brand: "Nike",
+    deliveryDays: 1,
     description: "Кроссовки Nike REVOLUTION 8 — идеальное сочетание стиля, комфорта и функциональности, предназначенное для активных мужчин. Изготовленная из высококачественных полимерных материалов, обувь обеспечивает отличную поддержку и легкость, что делает ее идеальной для повседневной носки и занятий спортом. Особенностью модели является амортизирующая подошва из резины, которая гарантирует надежное сцепление с поверхностью и отличную устойчивость на различных типах покрытия. Это позволяет вам уверенно двигаться, независимо от условий, будь то бег по парку или прогулка по городским улицам.",
     rating: 4.8,
     reviewCount: 156,
@@ -146,8 +156,10 @@ const products = [
 {
     id: 6,
     name: "Игрушки для собак и щенков, мелких и средних пород",
+    category: 17,
     images: ["image/dog1.jpg", "image/dog2.jpg", "image/dog3.jpg", "image/dog4.jpg"],
     brand: "Dogs & Puppies",
+    deliveryDays: 1,
     description: "Набор игрушек для щенков, собак мелких и средних пород-идеальное решение для активных и игривых питомцев. Вы будете спокойны за своего собакена купив по-настоящему прочный комплект игрушек, он отлично подойдет для активных игр, дрессировки и просто послужит заменителем ваших тапок, а уровень “счастливости” вашего хвостатого друга будет зашкаливать на целый день. ",
     variants: [
         {
@@ -172,8 +184,10 @@ const products = [
 {
     id: 7,
     name: "Робот-пылесос Roborock Q8 Max Pro Plus",
+    category: 15,
     images: ["image/pol1.jpg", "image/pol2.jpg", "image/pol3.jpg", "image/pol4.jpg"],
     brand: "Roborock",
+    deliveryDays: 1,
     description: ["Комплектация: Влагonепроницаемый коврик (1), Руководство пользователя (1), Робот (1), Модуль швабры (1), Зарядная станция (1), Адаптер (1), Швабра (1)    "],
     rating: 4.6,
     reviewCount: 98,
@@ -195,8 +209,10 @@ const products = [
 {
     id: 8,
     name: "Светодиодные Лед лампы h4 с линзой , мини линзы h4 LED h4 2 шт",
+    category: 23,
     images: ["image/cvet1.jpg", "image/cvet2.jpg", "image/cvet3.jpg", "image/cvet4.jpg"],
     brand: "LED Lights",
+    deliveryDays: 2,
     description: "Светодиодные линзы обеспечивают яркий и четкий свет, позволяя видеть опасности (например, животных на дороге) за несколько секунд раньше, чем галогеновые лампы. Это значительно повышает безопасность в ночное время.",
     rating: 4.4,
     reviewCount: 67,
@@ -225,8 +241,10 @@ const products = [
 {
     id: 9,
     name: "Кроссовки ASICS ASICS GEL-NYC 2055",
+    category: 11,
     images: ["image/asic.jpg", "image/asic2.jpg", "image/asic3.jpg"],
     brand: "Asics",
+    deliveryDays: 1,
     description: "Кроссовки ASICS GEL-NIMBUS 25/26/27: Максимальный комфорт для долгих дистанций ASICS GEL-NIMBUS 25/26/27 — это эволюция легендарной серии, созданной для бегунов, ценящих превосходную амортизацию и комфорт на любых дистанциях. Ключевые инновации: Улучшенная амортизация: — Технология FF BLAST PLUS ECO во всей пятке обеспечивает отличное смягчение ударов и энергичный отскок. Материал на 24% состоит из биокомпонентов, что делает кроссовки легкими и экологичными. — PureGel в пятке гасит удары эффективнее, чем традиционные системы, обеспечивая плавность движений. ",
     rating: 4.9,
     reviewCount: 1237,
@@ -263,8 +281,10 @@ const products = [
 {
 id: 10,
     name: "Протеин сывороточный для набора мышечной массы GLS Банановый ",
+    category: 21,
     images: ["image/pro.jpg", "image/pro2.jpg", "image/pro3.jpg"],
     brand: "WheyProtein",
+    deliveryDays: "1",
     description: "Протеин содержит большое количество аминокислот, в том числе ВСАА – лейцин, изолейцин и валин, которые стимулируют синтез белка, способствуя росту мышечной массы. Сывороточный протеин улучшает эффективность тренировочного процесса и силовые показатели. Протеин для набора мышечной массы способствует повышению уровня энергии, выносливости и работоспособности. ",
     rating: 4.7,
     reviewCount: 1237,
@@ -295,8 +315,10 @@ id: 10,
 {
     id: 11,
     name: "Конструктор Техник Porsche 911 RSR",
+    category: 25,
     images: ["image/por1.jpg", "image/por2.jpg", "image/por3.jpg"],
     brand: "Техник",
+    deliveryDays: 1,
     description: "Конструктор Technic Porsche 911 RSR — детализированная сборная модель легендарного гоночного автомобиля для детей, подростков, взрослых, коллекционеров и поклонников автоспорта. Набор позволяет собрать эффектную копию Porsche 911 RSR, вдохновленную миром гонок серии GT, и получить удовольствие от увлекательной сборки с реалистичными инженерными функциями.",
     rating: 4.8,
     reviewCount: 890,
@@ -318,8 +340,10 @@ id: 10,
 {
     id: 12,
     name: "LEVEND Свеча ароматическая Раффаэлло",
+    category: 17,
     images: ["image/cv1.jpg", "image/cv2.jpg", "image/cv3.jpg"],
     brand: "LEVEND",
+    deliveryDays: 3,
     description: "Cвеча ароматическая Раффаэлло от бренда LEVEND — это идеальное решение для создания уютной атмосферы в доме. Свеча обладает длительным горением и приятным ароматом, который поможет расслабиться после тяжелого дня.",
     rating: 4.9,
     reviewCount: 780,
@@ -346,8 +370,10 @@ id: 10,
 {
     id: 13,
     name: "Ароматический диффузор для дома с палочками Хлопок и миндаль 50 мл",
+    category: 17,
     images: ["image/dif.jpg", "image/dif2.jpg", "image/dif3.jpg"],
     brand: "home",
+    deliveryDays: "3",
     description: "Ароматический диффузор «Хлопок и миндаль» от LEVEND создаёт мягкий, естественный аромат с нотами теплого хлопка, сладковатого миндаля. Компактный настольный формат позволяет легко разместить его в любом углу комнаты, а фибровые палочки равномерно распределяют запах без резких скачков интенсивности.",
     rating: 4.9,
     reviewCount: 780,
@@ -369,8 +395,10 @@ id: 10,
 {
     id: 14,
     name: "MIXIT Скраб для тела парфюмированный женский соляной Лимонный пирог ",
+    category: 18,
     images: ["image/mix1.jpg", "image/mix2.jpg", "image/mix3.jpg"],
     brand: "MIXIT",
+    deliveryDays: 1,
     description: "Состав: Соль пищевая, масло кокосовое, крахмал кукурузный, глицерил стеарат, масло сладкого миндаля, масло ши, полисорбат 20, парфюмерная композиция, изопропил пальмитат, семена чиа, скорлупа грецкого ореха, бутилгидрокситолуол, вода, пропилен гликоль, экстракт манго, экстракт банана, динатриевая соль ЭДТА, бензоат натрия, сорбат калия, бензиловый спирт, лимонен, цитраль, линалоол, CI 19140, CI 15985.",
     rating: 4.5,
     reviewCount: 100,
@@ -392,8 +420,10 @@ id: 10,
 {
     id: 15,
     name: "VOIS Маска для волос с кератином восстанавливающая, 350мл",
+    category: 19,
     images: ["image/vois1.jpg", "image/vois2.jpg", "image/vois3.jpg"],
     brand: "VOIS",
+    deliveryDays: 2,
     description: "Состав:aqua, trideceth-12, cetrimonium chloride, sodium benzoate, amodimethicone, cetearyl alcohol, cetyl alcohol, behentrimonium chloride, isopropyl alcohol, bis-aminopropyl dimethicone, alcohol, behenamidopropyl dimethylamine, stearamidopropyl dimethylamine, hydroxyethylcellulose, lactic acid, peg-20 stearate, fragrance, phenoxyethanol, hydrolyzed oat protein, ethylhexylglycerin, peg-14m, bht, silica, glycerin, ficus carica (fig) fruit extract, 1,2-hexanediol, hydroxyacetophenone, ci 19140, sodium chloride, ci 15985, alanine, arginine, aspartic acid, serine, valine, glycine, pca, phenylalanine, proline, sodium pca, sodium lactate, threonine, histidine, isoleucine, dimethicone, keratin, macadamia ternifolia seed oil, argania spinosa kernel oil",
     rating: 4.7,
     reviewCount: 150,
@@ -411,7 +441,34 @@ id: 10,
         "Материал": "пластик",
         "Цвет": "зеленый"
     }
-}
+},
+{
+    id: 16,
+    name: "Mightily Держатель автомобильный",
+    category: 23,
+    images: ["image/car1.jpg", "image/car2.jpg", "image/car3.jpg"],
+    brand: "Mightily",
+    deliveryDays: 1,
+    description: "Упаковка, Держатель для телефона автомобильный - 1 шт.",
+    rating: 4.6,
+    reviewCount: 85,
+    variants: [
+        {
+            weight: "Стандарт",
+            price: 161,
+            oldPrice: 390
+        }
+    ],
+    characteristics: {
+        "Артикул": "2517322986",
+        "Тип": "Прочее",
+        "Количесвto в упаковке, шт": "1",
+        "Материал": "пластик",
+        "Цвет": "зеленый"
+    }
+},
+
+
 ]
 
 

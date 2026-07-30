@@ -54,7 +54,6 @@ function handleFavoriteClick(button, productId) {
     }
 }
 
-
 function removeFromCart(productId) {
     let cart = getList('cart');
     cart = cart.filter(item => item.id !== productId);
